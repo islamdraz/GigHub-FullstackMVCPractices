@@ -27,38 +27,38 @@
    
 
 }
-<ul class="gigs">
+<ul id="gigs" class="gigs">
     @foreach (var g in Model.UpCommingGigs)
     {
 
         <li>    
-                    <div class="date">
-                         <div class="month"> @g.Datetime.ToString("MMM")</div>
-                         <div class="day">@g.Datetime.ToString("d ")</div>
-                    </div>
-                    <div class="details">
-                        <span  class="artist">@Html.ActionLink(g.Artist.Name, "GigView", "Gigs",new {id=g.Id },null) 
+                <div class="date">
+                     <div class="month"> @g.Datetime.ToString("MMM")</div>
+                     <div class="day">@g.Datetime.ToString("d ")</div>
+                </div>
+                <div class="details">
+                    <span  class="artist">@Html.ActionLink(g.Artist.Name, "GigView", "Gigs",new {id=g.Id },null) 
 
 
 
-                            @if (g.IsCanceled)
-                            {
-
-                                <span class="label label-warning">Canceled </span>
-                            }
-                       
-                        
-                        </span>
-                        <span class="genre">@g.Genre.Name</span>
-
-                        @if (Model.IsAuthorized&&!g.IsCanceled)
+                        @if (g.IsCanceled)
                         {
-                           <button data-gig-id="@g.Id"
-                                    type="submit"
-                                    class="btn @(Model.Attendences.Contains(g.Id) ? "btn-info" : "btn-default") btn-sm  js-toggle-gig">
-                        Going ?</button>
+
+                            <span class="label label-warning">Canceled </span>
                         }
-                    </div>
+                   
+                    
+                    </span>
+                    <span class="genre">@g.Genre.Name</span>
+
+                    @if (Model.IsAuthorized&&!g.IsCanceled)
+                    {
+                       <button data-gig-id="@g.Id"
+                                type="submit"
+                                class="btn @(Model.Attendences.Contains(g.Id) ? "btn-info" : "btn-default") btn-sm  js-toggle-gig">
+                    Going ?</button>
+                    }
+                </div>
             
      </li>
 
@@ -71,7 +71,7 @@
     <script>
 
         $(document).ready(function () {
-            GigController.init();
+            GigController.init("#gigs");
 
             ArtistController.init();
             

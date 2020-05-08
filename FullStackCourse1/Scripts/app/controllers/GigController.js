@@ -3,8 +3,8 @@ var GigController = function (attendanceService) {
 
     var button;
 
-    var init = function () {
-        $('.js-toggle-gig').on('click',toggleAttendance);
+    var init = function (container) {
+        $(container).on('click', '.js-toggle-gig',toggleAttendance);
     }
 
 

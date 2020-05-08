@@ -6,7 +6,6 @@ using Ninject.Web.Common;
 using Ninject.Web.Common.WebHost;
 using Ninject.Extensions.Conventions;
 using System;
-
 using System.Web;
 
 
