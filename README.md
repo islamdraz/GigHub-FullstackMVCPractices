@@ -22,6 +22,8 @@ Unit Testing
 
 Integration Testing 
 
+Revealing Module pattern
+
 and much more ....
 
 its very nice example for any body wants to practice web development using Asp.net Mvc and javascript 
