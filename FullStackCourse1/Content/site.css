@@ -1,0 +1,202 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Boot strap override*/
+
+.popover{
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+.popover-content{
+    padding:0px;
+}
+.navbar-inverse {
+    background-color: #f32626;
+    border-color: #f32626;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse .notifications {
+
+    position:relative;
+}
+
+    .navbar-inverse .notifications >a .badge {
+    position:absolute;
+    top:8px;
+    right:-1px;
+    }
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #999999;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: rgba(119, 15, 15, 0.1);
+}
+.navbar-brand{
+    font-weight:700;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 3px 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #292b2c;
+    text-align: inherit;
+    white-space: nowrap;
+    background: 0 0;
+    border: 0;
+}
+.dropdown-item.divider {
+     padding: 1px 1.5rem;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #1d1e1f;
+    text-decoration: none;
+    background-color: #f7f7f9;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0275d8;
+}
+
+/*Page-level style*/
+
+.gigs{
+    list-style:none;
+    margin-top:30px;
+}
+.gigs >li{
+    position:relative;
+    margin-bottom:30px;
+}
+.gigs >li .details{
+
+    position:absolute;
+    top:0px;
+    left:70px;
+    display:inline-grid;
+     
+}
+    .gigs > li .details .artist{
+       display:block;
+        font-weight:bold;
+        font-size:20px;
+    }
+    .gigs > li .details .genre {    
+        font-size:13px;
+    }
+    .gigs > li .details>button{
+
+        border-radius:10px;
+    }
+
+.gigs >li .date {
+    background-color:red;
+    color:white;  
+    width:60px;
+    text-align:center;
+    border-radius:8px;
+    
+}
+    .gigs > li .date .month {
+     font-size:16px;
+     padding:4px 6px;
+    }
+    .gigs > li .date .day {
+        background-color:gainsboro;
+        color:dimgray;
+        padding:8px 6px;
+        font-size:20px;
+    }
+
+    .gigs > li .details .actions{
+       display:none;
+    }
+    
+    .gigs > li:hover .details .actions{
+       display:block;
+    }
+
+
+ .popover-content > ul.notifications{
+
+    list-style:none;
+    padding:0px;
+}
+ .popover-content > ul.notifications>li{
+
+     padding:5px 10px;
+     padding-bottom:10px;
+     border-bottom:1px solid #ddd;
+ }
+
+    .popover-content > ul.notifications > li:last-child {
+    
+       border-bottom:none;
+    }
+
+ .highlighted{
+     font-weight:bold;
+
+ }
+
+ .notifications .badge {
+     background-color: darkred;
+ }
+
+ #searchCtrl{
+
+     width:300px;
+ }
+
+ #searchCtrl .glyphicon{
+     top:0px;
+ }
+
+ .gig-details{
+     display:inline-grid;
+ }
+ .gig-details .artist{
+     font-size:40px;
+ }
+ .gig-details .gig-info{
+     font-size:20px;
+ }
