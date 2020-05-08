@@ -1,9 +1,7 @@
 # GigHub-FullstackMVCPractices
 
 this project is practicing for the FullStack developer course in pluralsight by mosh 
-
 # inorder to run the project
-
 use package console manager to run the below command in order to create and seed the database  
 
 update-database 
