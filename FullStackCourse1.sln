@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullStackCourse1", "FullStackCourse1\FullStackCourse1.csproj", "{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gighub.Test", "Gighub.Test\Gighub.Test.csproj", "{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,15 @@ Global
 		{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A615599-681F-476D-9218-9342A81F07DB}
 	EndGlobalSection
 EndGlobal
