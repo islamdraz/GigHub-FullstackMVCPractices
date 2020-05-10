@@ -17,7 +17,7 @@ namespace FullStackCourse1.Controllers.Api
     {
         
         IUnitOfWork _unitOfWork;
-        public GigsApiController(UnitOfWork unitOfWork)
+        public GigsApiController(IUnitOfWork unitOfWork)
         {
             
             _unitOfWork = unitOfWork;
