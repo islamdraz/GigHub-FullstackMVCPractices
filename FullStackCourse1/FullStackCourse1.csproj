@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -308,21 +309,21 @@
     <Compile Include="Persistance\EntityConfiguration\ApplicationUserConfiguration.cs" />
     <Compile Include="Persistance\EntityConfiguration\GigConfiguration.cs" />
     <Compile Include="Persistance\EntityConfiguration\NotificationConfiguration.cs" />
-    <Compile Include="Persistance\Migrations\201809281405219_addCancelColumnToGig.cs" />
-    <Compile Include="Persistance\Migrations\201809281405219_addCancelColumnToGig.Designer.cs">
-      <DependentUpon>201809281405219_addCancelColumnToGig.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\addCancelColumnToGig.cs" />
+    <Compile Include="Persistance\Migrations\addCancelColumnToGig.Designer.cs">
+      <DependentUpon>addCancelColumnToGig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809301905399_AddNotification.cs" />
-    <Compile Include="Persistance\Migrations\201809301905399_AddNotification.Designer.cs">
-      <DependentUpon>201809301905399_AddNotification.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\AddNotification.cs" />
+    <Compile Include="Persistance\Migrations\AddNotification.Designer.cs">
+      <DependentUpon>AddNotification.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201810020338103_AddNotification1.cs" />
-    <Compile Include="Persistance\Migrations\201810020338103_AddNotification1.Designer.cs">
-      <DependentUpon>201810020338103_AddNotification1.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\AddNotification1.cs" />
+    <Compile Include="Persistance\Migrations\AddNotification1.Designer.cs">
+      <DependentUpon>AddNotification1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201810121452367_addIsReadyTouserNotification.cs" />
-    <Compile Include="Persistance\Migrations\201810121452367_addIsReadyTouserNotification.Designer.cs">
-      <DependentUpon>201810121452367_addIsReadyTouserNotification.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\addIsReadyTouserNotification.cs" />
+    <Compile Include="Persistance\Migrations\addIsReadyTouserNotification.Designer.cs">
+      <DependentUpon>addIsReadyTouserNotification.cs</DependentUpon>
     </Compile>
     <Compile Include="Core\Models\Notification.cs" />
     <Compile Include="Core\Models\NotificationType.cs" />
@@ -350,37 +351,37 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809072052277_intiateDB.cs" />
-    <Compile Include="Persistance\Migrations\201809072052277_intiateDB.Designer.cs">
-      <DependentUpon>201809072052277_intiateDB.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\intiateDB.cs" />
+    <Compile Include="Persistance\Migrations\intiateDB.Designer.cs">
+      <DependentUpon>intiateDB.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809072119437_addgigGenreTb.cs" />
-    <Compile Include="Persistance\Migrations\201809072119437_addgigGenreTb.Designer.cs">
-      <DependentUpon>201809072119437_addgigGenreTb.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\addgigGenreTb.cs" />
+    <Compile Include="Persistance\Migrations\addgigGenreTb.Designer.cs">
+      <DependentUpon>addgigGenreTb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809072123173_Annotation.cs" />
-    <Compile Include="Persistance\Migrations\201809072123173_Annotation.Designer.cs">
-      <DependentUpon>201809072123173_Annotation.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\Annotation.cs" />
+    <Compile Include="Persistance\Migrations\Annotation.Designer.cs">
+      <DependentUpon>Annotation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809072152457_PopulateGenresTable.cs" />
-    <Compile Include="Persistance\Migrations\201809072152457_PopulateGenresTable.Designer.cs">
-      <DependentUpon>201809072152457_PopulateGenresTable.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\PopulateGenresTable.cs" />
+    <Compile Include="Persistance\Migrations\PopulateGenresTable.Designer.cs">
+      <DependentUpon>PopulateGenresTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809111919039_AddGenreForignKey.cs" />
-    <Compile Include="Persistance\Migrations\201809111919039_AddGenreForignKey.Designer.cs">
-      <DependentUpon>201809111919039_AddGenreForignKey.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\AddGenreForignKey.cs" />
+    <Compile Include="Persistance\Migrations\AddGenreForignKey.Designer.cs">
+      <DependentUpon>AddGenreForignKey.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809111923581_updateGigGenretype.cs" />
-    <Compile Include="Persistance\Migrations\201809111923581_updateGigGenretype.Designer.cs">
-      <DependentUpon>201809111923581_updateGigGenretype.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\updateGigGenretype.cs" />
+    <Compile Include="Persistance\Migrations\updateGigGenretype.Designer.cs">
+      <DependentUpon>updateGigGenretype.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809161947192_AddNameToApplicationUser.cs" />
-    <Compile Include="Persistance\Migrations\201809161947192_AddNameToApplicationUser.Designer.cs">
-      <DependentUpon>201809161947192_AddNameToApplicationUser.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\AddNameToApplicationUser.cs" />
+    <Compile Include="Persistance\Migrations\AddNameToApplicationUser.Designer.cs">
+      <DependentUpon>AddNameToApplicationUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\201809231950592_AddAttendence-FollowersTables.cs" />
-    <Compile Include="Persistance\Migrations\201809231950592_AddAttendence-FollowersTables.Designer.cs">
-      <DependentUpon>201809231950592_AddAttendence-FollowersTables.cs</DependentUpon>
+    <Compile Include="Persistance\Migrations\AddAttendenceFollowersTables.cs" />
+    <Compile Include="Persistance\Migrations\AddAttendenceFollowersTables.Designer.cs">
+      <DependentUpon>AddAttendenceFollowersTables.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistance\Migrations\Configuration.cs" />
     <Compile Include="Core\ViewModels\AccountViewModels.cs" />
@@ -484,41 +485,41 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Persistance\Migrations\201809072052277_intiateDB.resx">
-      <DependentUpon>201809072052277_intiateDB.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\intiateDB.resx">
+      <DependentUpon>intiateDB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809072119437_addgigGenreTb.resx">
-      <DependentUpon>201809072119437_addgigGenreTb.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\addgigGenreTb.resx">
+      <DependentUpon>addgigGenreTb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809072123173_Annotation.resx">
-      <DependentUpon>201809072123173_Annotation.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\Annotation.resx">
+      <DependentUpon>Annotation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809072152457_PopulateGenresTable.resx">
-      <DependentUpon>201809072152457_PopulateGenresTable.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\PopulateGenresTable.resx">
+      <DependentUpon>PopulateGenresTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809111919039_AddGenreForignKey.resx">
-      <DependentUpon>201809111919039_AddGenreForignKey.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\AddGenreForignKey.resx">
+      <DependentUpon>AddGenreForignKey.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809111923581_updateGigGenretype.resx">
-      <DependentUpon>201809111923581_updateGigGenretype.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\updateGigGenretype.resx">
+      <DependentUpon>updateGigGenretype.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809161947192_AddNameToApplicationUser.resx">
-      <DependentUpon>201809161947192_AddNameToApplicationUser.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\AddNameToApplicationUser.resx">
+      <DependentUpon>AddNameToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809231950592_AddAttendence-FollowersTables.resx">
-      <DependentUpon>201809231950592_AddAttendence-FollowersTables.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\AddAttendenceFollowersTables.resx">
+      <DependentUpon>AddAttendenceFollowersTables.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809281405219_addCancelColumnToGig.resx">
-      <DependentUpon>201809281405219_addCancelColumnToGig.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\addCancelColumnToGig.resx">
+      <DependentUpon>addCancelColumnToGig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201809301905399_AddNotification.resx">
-      <DependentUpon>201809301905399_AddNotification.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\AddNotification.resx">
+      <DependentUpon>AddNotification.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201810020338103_AddNotification1.resx">
-      <DependentUpon>201810020338103_AddNotification1.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\AddNotification1.resx">
+      <DependentUpon>AddNotification1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\201810121452367_addIsReadyTouserNotification.resx">
-      <DependentUpon>201810121452367_addIsReadyTouserNotification.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\addIsReadyTouserNotification.resx">
+      <DependentUpon>addIsReadyTouserNotification.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

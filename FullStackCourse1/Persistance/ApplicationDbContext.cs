@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
+using FullStackCourse1.Core;
 using FullStackCourse1.Core.Models;
 using FullStackCourse1.Persistance.EntityConfiguration;
 
@@ -45,4 +46,6 @@ namespace FullStackCourse1.Persistance
             base.OnModelCreating(modelBuilder);
         }
     }
+
+   
 }
