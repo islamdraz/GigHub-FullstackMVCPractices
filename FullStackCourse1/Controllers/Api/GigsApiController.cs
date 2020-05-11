@@ -28,12 +28,11 @@ namespace FullStackCourse1.Controllers.Api
         {
             var gig = _unitOfWork.Gigs.GetGigWithAttendees(id);
 
-            if (gig == null)
+            if (gig == null||gig.IsCanceled)
                 return NotFound();
             if (User.Identity.GetUserId() != gig.ArtistId)
                 return Unauthorized();
-            if (gig.IsCanceled)
-                return NotFound();
+
             gig.Cancel();
             _unitOfWork.Complete();
                        

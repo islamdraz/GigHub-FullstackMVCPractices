@@ -22,10 +22,11 @@ namespace Gighub.Test.Controllers.Api
    public class GigsApiControllerTest
     {
         private GigsApiController _gigsController;
-        private readonly Mock<IGigRepository> _gigRepoMock;
+        private  Mock<IGigRepository> _gigRepoMock;
         private  string _userId;
 
-        public GigsApiControllerTest()
+        [TestInitialize]
+        public void TestInitialize()
         {
              _gigRepoMock=new Mock<IGigRepository>();
             var _unitOfWork =new Mock<IUnitOfWork>();
@@ -50,7 +51,7 @@ namespace Gighub.Test.Controllers.Api
         {
             var gig = new Gig();
             gig.Cancel();
-            gig.ArtistId = _gigsController.User.Identity.GetUserId();
+            gig.ArtistId = _userId;
             _gigRepoMock.Setup(g => g.GetGigWithAttendees(1)).Returns(gig);
 
            
@@ -62,8 +63,7 @@ namespace Gighub.Test.Controllers.Api
         [TestMethod]
         public void Cancel_UserCancelHisGig_OkResult()
         {
-            var gig = new Gig();
-            gig.ArtistId = _gigsController.User.Identity.GetUserId();
+            var gig = new Gig {ArtistId = _userId};
             _gigRepoMock.Setup(g => g.GetGigWithAttendees(1)).Returns(gig);
 
             var result = _gigsController.Cancel(1);
@@ -75,9 +75,8 @@ namespace Gighub.Test.Controllers.Api
         [TestMethod]
         public void Cancel_UserCancelAnotherUserGig_ReturnNotAuthorized()
         {
-            var gig = new Gig();
+            var gig = new Gig {ArtistId = _userId + "-"};
 
-            gig.ArtistId = _userId + "-";
             _gigRepoMock.Setup(g => g.GetGigWithAttendees(1)).Returns(gig);
 
             var result = _gigsController.Cancel(1);

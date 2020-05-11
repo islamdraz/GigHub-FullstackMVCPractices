@@ -25,16 +25,19 @@ namespace FullStackCourse1.Controllers
         [HttpPost]
         public IHttpActionResult AddGigAttendance(AttendDto attendDto)
         {
-            if (_unitOfWork.Attendences.GetAttendance(attendDto.GigId, User.Identity.GetUserId())!=null)
+            var gig = _unitOfWork.Gigs.GetGigWithAttendees(attendDto.GigId);
+            if (gig == null)
+                return BadRequest($"No gig exists with id {attendDto.GigId}");
+            if (gig.Attendences.Any(a=>a.AttendeeId==User.Identity.GetUserId()))
             {
                 return BadRequest("you already attending this gig");
             }
-            Attendence attendece = new Attendence
+            Attendence attendance = new Attendence
             {
                 AttendeeId = User.Identity.GetUserId(),
                 GigId = attendDto.GigId
             };
-            _unitOfWork.Attendences.Add(attendece);
+            _unitOfWork.Attendences.Add(attendance);
             _unitOfWork.Complete();
 
             return Ok();

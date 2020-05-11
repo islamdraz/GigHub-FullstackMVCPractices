@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\Api\GigsApiControllerTest.cs" />
+    <Compile Include="Controllers\AttendanceControllerTest.cs" />
     <Compile Include="Extensions\ControllerExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
