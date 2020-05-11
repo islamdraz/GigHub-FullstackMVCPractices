@@ -49,11 +49,7 @@ namespace FullStackCourse1.Core.Models
 
         public void Update(DateTime datetime, byte genreId,string venue)
         {
-            if (datetime == null)
-                throw new ArgumentNullException("datetime");
-            
-
-
+          
             if (venue == null)
                 throw new ArgumentNullException("Venue");
 

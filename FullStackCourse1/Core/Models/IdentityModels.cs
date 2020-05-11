@@ -19,6 +19,7 @@ namespace FullStackCourse1.Core.Models
        
         public ApplicationUser()
         {
+            
             UserNotifications = new List<UserNotification>();
         }
 
