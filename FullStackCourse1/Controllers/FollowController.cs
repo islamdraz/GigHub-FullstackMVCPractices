@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace FullStackCourse1.Controllers
 {
+    [Authorize]
     public class FollowController : Controller
     {
 
