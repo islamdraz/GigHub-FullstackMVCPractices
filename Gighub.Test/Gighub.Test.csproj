@@ -115,7 +115,9 @@
     <Compile Include="Controllers\Api\GigsApiControllerTest.cs" />
     <Compile Include="Controllers\AttendanceControllerTest.cs" />
     <Compile Include="Controllers\FollowControllerTest.cs" />
+    <Compile Include="DomainModels\ApplicationUserTest.cs" />
     <Compile Include="DomainModels\GigTest.cs" />
+    <Compile Include="DomainModels\NotificationTest.cs" />
     <Compile Include="Extensions\ControllerExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

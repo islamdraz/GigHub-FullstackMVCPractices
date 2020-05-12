@@ -390,7 +390,7 @@
     <Compile Include="Core\Models\Attendence.cs" />
     <Compile Include="Core\Models\Genre.cs" />
     <Compile Include="Core\Models\Gig.cs" />
-    <Compile Include="Core\Models\IdentityModels.cs" />
+    <Compile Include="Core\Models\ApplicationUser.cs" />
     <Compile Include="Core\ViewModels\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
