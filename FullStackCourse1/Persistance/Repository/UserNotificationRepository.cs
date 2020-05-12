@@ -9,8 +9,8 @@ namespace FullStackCourse1.Persistance.Repository
 {
     public class UserNotificationRepository : IUserNotificationRepository
     {
-        ApplicationDbContext _context;
-        public UserNotificationRepository(ApplicationDbContext context)
+        IApplicationDbContext _context;
+        public UserNotificationRepository(IApplicationDbContext context)
         {
             _context = context;
         }

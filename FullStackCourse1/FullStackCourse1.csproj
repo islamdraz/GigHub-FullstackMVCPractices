@@ -305,6 +305,7 @@
     <Compile Include="Controllers\FollowingController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Persistance\IApplicationDbContext.cs" />
     <Compile Include="Core\IRepository\IApplicationUserRepository.cs" />
     <Compile Include="Persistance\EntityConfiguration\ApplicationUserConfiguration.cs" />
     <Compile Include="Persistance\EntityConfiguration\GigConfiguration.cs" />

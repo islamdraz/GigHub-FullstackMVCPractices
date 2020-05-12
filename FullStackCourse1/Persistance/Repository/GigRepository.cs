@@ -11,8 +11,8 @@ namespace FullStackCourse1.Persistance.Repository
 {
     public class GigRepository : IGigRepository
     {
-        ApplicationDbContext _context;
-        public GigRepository(ApplicationDbContext context)
+        IApplicationDbContext _context;
+        public GigRepository(IApplicationDbContext context)
         {
             _context = context;
         }
@@ -27,10 +27,10 @@ namespace FullStackCourse1.Persistance.Repository
 
         public Gig GetGigWithAttendees(int id)
         {
-          return  _context.Gigs
+            return _context.Gigs
                 .Include(p => p.Attendences.Select(a => a.Attendee))
-                .Where(g => g.Id == id)
-                .SingleOrDefault();
+                .SingleOrDefault(g => g.Id == id);
+
         }
 
         public void Add(Gig gig)

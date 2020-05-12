@@ -9,9 +9,9 @@ namespace FullStackCourse1.Persistance.Repository
 {
     public class ArtistFollowingRepository : IArtistFollowingRepository
     {
-        ApplicationDbContext _context;
+        IApplicationDbContext _context;
 
-        public ArtistFollowingRepository(ApplicationDbContext context)
+        public ArtistFollowingRepository(IApplicationDbContext context)
         {
             _context = context;
         }

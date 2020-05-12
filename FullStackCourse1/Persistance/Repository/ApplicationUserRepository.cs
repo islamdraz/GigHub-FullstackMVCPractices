@@ -9,9 +9,9 @@ namespace FullStackCourse1.Persistance.Repository
 {
     public class ApplicationUserRepository : IApplicationUserRepository
     {
-        private ApplicationDbContext _context;
+        private IApplicationDbContext _context;
 
-        public ApplicationUserRepository(ApplicationDbContext context)
+        public ApplicationUserRepository(IApplicationDbContext context)
         {
             _context = context;
         }

@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using FullStackCourse1.Core.Models;
+using FullStackCourse1.Persistance.EntityConfiguration;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
-using FullStackCourse1.Core;
-using FullStackCourse1.Core.Models;
-using FullStackCourse1.Persistance.EntityConfiguration;
 
 namespace FullStackCourse1.Persistance
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IApplicationDbContext
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
@@ -47,5 +42,5 @@ namespace FullStackCourse1.Persistance
         }
     }
 
-   
+
 }

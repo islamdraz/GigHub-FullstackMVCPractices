@@ -119,6 +119,7 @@
     <Compile Include="DomainModels\GigTest.cs" />
     <Compile Include="DomainModels\NotificationTest.cs" />
     <Compile Include="Extensions\ControllerExtension.cs" />
+    <Compile Include="Persistance\Repository\ApplicationUserRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -131,9 +132,7 @@
       <Name>FullStackCourse1</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Persistance\Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

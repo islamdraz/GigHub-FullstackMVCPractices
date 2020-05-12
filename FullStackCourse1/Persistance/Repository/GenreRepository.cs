@@ -9,8 +9,8 @@ namespace FullStackCourse1.Persistance.Repository
 {
     public class GenreRepository : IGenreRepository
     {
-        ApplicationDbContext _context;
-        public GenreRepository(ApplicationDbContext context)
+        IApplicationDbContext _context;
+        public GenreRepository(IApplicationDbContext context)
         {
             _context = context;
         }

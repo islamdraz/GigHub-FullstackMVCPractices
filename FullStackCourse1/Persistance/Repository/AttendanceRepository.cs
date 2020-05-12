@@ -9,8 +9,8 @@ namespace FullStackCourse1.Persistance.Repository
 {
     public class AttendanceRepository : IAttendanceRepository
     {
-        ApplicationDbContext _context;
-        public AttendanceRepository(ApplicationDbContext context)
+        IApplicationDbContext _context;
+        public AttendanceRepository(IApplicationDbContext context)
         {
             _context = context;
         }
