@@ -119,7 +119,10 @@
     <Compile Include="DomainModels\GigTest.cs" />
     <Compile Include="DomainModels\NotificationTest.cs" />
     <Compile Include="Extensions\ControllerExtension.cs" />
+    <Compile Include="Extensions\MockDbSetExtensions.cs" />
+    <Compile Include="Helper\DbSetSourceMock.cs" />
     <Compile Include="Persistance\Repository\ApplicationUserRepositoryTest.cs" />
+    <Compile Include="Persistance\Repository\GigsRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

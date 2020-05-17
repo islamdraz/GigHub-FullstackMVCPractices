@@ -9,7 +9,7 @@ namespace FullStackCourse1.Core.Models
 {
     public class Gig
     {
-        public int Id { get; private set; }
+        public int Id { get;  set; }
 
         public bool IsCanceled { get; private set; }
         public ApplicationUser Artist { get; set; }
