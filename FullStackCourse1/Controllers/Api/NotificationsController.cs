@@ -1,17 +1,16 @@
-﻿using FullStackCourse1.Core.Models;
-using Microsoft.AspNet.Identity;
+﻿using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Data.Entity;
 
 using AutoMapper;
 using FullStackCourse1.Core.Dtos;
-using FullStackCourse1.Persistance;
 using FullStackCourse1.Core;
+using GigHub.Model.Models;
+using GigHub.Shared;
 using WebGrease.Css.Extensions;
 
 namespace FullStackCourse1.Controllers.Api

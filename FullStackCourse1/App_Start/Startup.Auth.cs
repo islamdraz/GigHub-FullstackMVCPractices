@@ -5,8 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using FullStackCourse1.Core.Models;
-using FullStackCourse1.Persistance;
+using GigHub.Model.Models;
+
+using ApplicationDbContext = FullStackCourse1.Persistance.ApplicationDbContext;
 
 namespace FullStackCourse1
 {

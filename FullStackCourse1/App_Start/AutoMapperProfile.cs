@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using FullStackCourse1.Core.Dtos;
-using FullStackCourse1.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using GigHub.Model.Models;
 
 namespace FullStackCourse1.App_Start
 {

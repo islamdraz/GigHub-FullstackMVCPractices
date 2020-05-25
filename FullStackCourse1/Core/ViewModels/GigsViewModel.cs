@@ -1,6 +1,6 @@
 ﻿using System.Linq;
-using FullStackCourse1.Core.Models;
 using System.Collections.Generic;
+using GigHub.Model.Models;
 
 namespace FullStackCourse1.Core.ViewModels
 {

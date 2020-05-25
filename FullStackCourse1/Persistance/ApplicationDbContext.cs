@@ -1,7 +1,7 @@
-﻿using FullStackCourse1.Core.Models;
+﻿using System.Data.Entity;
 using FullStackCourse1.Persistance.EntityConfiguration;
+using GigHub.Model.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
-using System.Data.Entity;
 
 namespace FullStackCourse1.Persistance
 {

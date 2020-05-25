@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using FullStackCourse1.Core.Models;
+using GigHub.Model.Models;
 
 namespace FullStackCourse1.Persistance
 {

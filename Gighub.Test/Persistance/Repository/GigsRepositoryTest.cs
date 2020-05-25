@@ -1,13 +1,11 @@
-﻿using System;
-using FluentAssertions;
-using FullStackCourse1.Core.Models;
-using FullStackCourse1.Persistance;
-using FullStackCourse1.Persistance.Repository;
-using Gighub.Test.Extensions;
+﻿using FluentAssertions;
+using Gighub.Test.Helper;
+using GigHub.Model.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System.Collections.Generic;
-using System.Data.Entity;
+using System;
+using FullStackCourse1.Persistance;
+using FullStackCourse1.Persistance.Repository;
 
 namespace Gighub.Test.Persistance.Repository
 {
@@ -15,15 +13,14 @@ namespace Gighub.Test.Persistance.Repository
     public class GigsRepositoryTest
     {
         private GigRepository _repository;
-        private Mock<DbSet<Gig>> _mockGigs;
-       
+        private Mock<IApplicationDbContext> _mockContext;
+
+
         [TestInitialize]
         public void TestInitialize()
         {
-            _mockGigs = new Mock<DbSet<Gig>>();
-            var mockContext = new Mock<IApplicationDbContext>();
-            mockContext.SetupGet(c => c.Gigs).Returns(_mockGigs.Object);
-            _repository = new GigRepository(mockContext.Object);
+            _mockContext = new Mock<IApplicationDbContext>();
+            _repository = new GigRepository(_mockContext.Object);
         }
 
         [TestMethod]
@@ -31,7 +28,7 @@ namespace Gighub.Test.Persistance.Repository
         {
             var gig = new Gig() { Datetime = DateTime.Now.AddDays(-1), ArtistId = "1" };
 
-            _mockGigs.SetSource(new[] { gig });
+            _mockContext.Setup(x => x.Gigs).Returns(DbSetSourceMock.GetQueryableMockDbSet(gig));
 
             var gigs = _repository.GetArtistFutureGigs("1");
 

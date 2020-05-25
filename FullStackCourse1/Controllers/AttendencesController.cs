@@ -1,8 +1,5 @@
 ﻿using FullStackCourse1.Core;
 using FullStackCourse1.Core.Dtos;
-
-using FullStackCourse1.Core.Models;
-using FullStackCourse1.Persistance;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -10,6 +7,8 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using GigHub.Model.Models;
+using GigHub.Shared;
 
 namespace FullStackCourse1.Controllers
 {

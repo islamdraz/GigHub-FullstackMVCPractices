@@ -1,12 +1,11 @@
 ﻿using FullStackCourse1.Core;
-using FullStackCourse1.Core.Models;
-using FullStackCourse1.Persistance;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GigHub.Shared;
 
 namespace FullStackCourse1.Controllers
 {

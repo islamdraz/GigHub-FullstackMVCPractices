@@ -1,9 +1,5 @@
-﻿using FullStackCourse1.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity.ModelConfiguration;
+using GigHub.Model.Models;
 
 namespace FullStackCourse1.Persistance.EntityConfiguration
 {

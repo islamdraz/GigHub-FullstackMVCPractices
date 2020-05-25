@@ -12,8 +12,9 @@ using Gighub.Test.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using FluentAssertions;
-using FullStackCourse1.Core.IRepository;
-using FullStackCourse1.Core.Models;
+using GigHub.Model.Models;
+using GigHub.Shared;
+using GigHub.Shared.IRepository;
 using Microsoft.AspNet.Identity;
 
 namespace Gighub.Test.Controllers.Api

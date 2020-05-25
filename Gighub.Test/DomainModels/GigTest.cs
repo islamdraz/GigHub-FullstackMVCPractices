@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
-using FullStackCourse1.Core.Models;
+using GigHub.Model.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Gighub.Test.DomainModels

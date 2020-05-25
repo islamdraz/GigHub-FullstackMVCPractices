@@ -1,10 +1,8 @@
-﻿using FullStackCourse1.Core.IRepository;
-using FullStackCourse1.Core.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
+using GigHub.Model.Models;
+using GigHub.Shared.IRepository;
 
 namespace FullStackCourse1.Persistance.Repository
 {

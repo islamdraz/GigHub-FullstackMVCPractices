@@ -1,11 +1,8 @@
-namespace FullStackCourse1.Migrations
-{
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
+using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<FullStackCourse1.Persistance.ApplicationDbContext>
+namespace FullStackCourse1.Persistance.Migrations
+{
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
@@ -14,7 +11,7 @@ namespace FullStackCourse1.Migrations
             MigrationsDirectory = @"Persistance\Migrations";
         }
 
-        protected override void Seed(FullStackCourse1.Persistance.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

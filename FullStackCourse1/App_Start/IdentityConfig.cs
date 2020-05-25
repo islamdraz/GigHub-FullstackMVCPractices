@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
+using FullStackCourse1.Persistance;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using FullStackCourse1.Core.Models;
-using FullStackCourse1.Persistance;
+
+using GigHub.Model.Models;
+
+using Microsoft.AspNet.Identity.EntityFramework;
+
 
 namespace FullStackCourse1
 {

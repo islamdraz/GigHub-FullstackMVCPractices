@@ -58,12 +58,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -92,6 +90,12 @@
     <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -245,14 +249,8 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Owin">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
@@ -305,14 +303,44 @@
     <Compile Include="Controllers\FollowingController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Persistance\IApplicationDbContext.cs" />
-    <Compile Include="Core\IRepository\IApplicationUserRepository.cs" />
+    <Compile Include="Core\ViewModels\GigDetailsViewModel.cs" />
+    <Compile Include="Core\ViewModels\GigsViewModel.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Core\Dtos\AttendDto.cs" />
+    <Compile Include="Core\Dtos\FollowDto.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ViewModels\AccountViewModels.cs" />
+    <Compile Include="Core\ViewModels\ManageViewModels.cs" />
+    <Compile Include="Persistance\ApplicationDbContext.cs" />
     <Compile Include="Persistance\EntityConfiguration\ApplicationUserConfiguration.cs" />
     <Compile Include="Persistance\EntityConfiguration\GigConfiguration.cs" />
     <Compile Include="Persistance\EntityConfiguration\NotificationConfiguration.cs" />
+    <Compile Include="Persistance\IApplicationDbContext.cs" />
+    <Compile Include="Persistance\Migrations\AddAttendenceFollowersTables.cs" />
+    <Compile Include="Persistance\Migrations\AddAttendenceFollowersTables.Designer.cs">
+      <DependentUpon>AddAttendenceFollowersTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persistance\Migrations\addCancelColumnToGig.cs" />
     <Compile Include="Persistance\Migrations\addCancelColumnToGig.Designer.cs">
       <DependentUpon>addCancelColumnToGig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistance\Migrations\AddGenreForignKey.cs" />
+    <Compile Include="Persistance\Migrations\AddGenreForignKey.Designer.cs">
+      <DependentUpon>AddGenreForignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistance\Migrations\addgigGenreTb.cs" />
+    <Compile Include="Persistance\Migrations\addgigGenreTb.Designer.cs">
+      <DependentUpon>addgigGenreTb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistance\Migrations\addIsReadyTouserNotification.cs" />
+    <Compile Include="Persistance\Migrations\addIsReadyTouserNotification.Designer.cs">
+      <DependentUpon>addIsReadyTouserNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistance\Migrations\AddNameToApplicationUser.cs" />
+    <Compile Include="Persistance\Migrations\AddNameToApplicationUser.Designer.cs">
+      <DependentUpon>AddNameToApplicationUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistance\Migrations\AddNotification.cs" />
     <Compile Include="Persistance\Migrations\AddNotification.Designer.cs">
@@ -322,77 +350,31 @@
     <Compile Include="Persistance\Migrations\AddNotification1.Designer.cs">
       <DependentUpon>AddNotification1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\addIsReadyTouserNotification.cs" />
-    <Compile Include="Persistance\Migrations\addIsReadyTouserNotification.Designer.cs">
-      <DependentUpon>addIsReadyTouserNotification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Core\Models\Notification.cs" />
-    <Compile Include="Core\Models\NotificationType.cs" />
-    <Compile Include="Core\Models\UserNotification.cs" />
-    <Compile Include="Core\IUnitOfWork.cs" />
-    <Compile Include="Persistance\Repository\ApplicationUserRepository.cs" />
-    <Compile Include="Core\IRepository\INotificationRepository.cs" />
-    <Compile Include="Core\IRepository\IUserNotificationRepository.cs" />
-    <Compile Include="Persistance\Repository\NotificationRepository.cs" />
-    <Compile Include="Persistance\Repository\UserNotificationRepository.cs" />
-    <Compile Include="Persistance\UnitOfWork.cs" />
-    <Compile Include="Persistance\Repository\ArtistFollowingRepository.cs" />
-    <Compile Include="Persistance\Repository\AttendanceRepository.cs" />
-    <Compile Include="Persistance\Repository\GenreRepository.cs" />
-    <Compile Include="Persistance\Repository\GigRepository.cs" />
-    <Compile Include="Core\IRepository\IArtistFollowingRepository.cs" />
-    <Compile Include="Core\IRepository\IAttendanceRepository.cs" />
-    <Compile Include="Core\IRepository\IGenreRepository.cs" />
-    <Compile Include="Core\IRepository\IGigRepository.cs" />
-    <Compile Include="Core\ViewModels\GigDetailsViewModel.cs" />
-    <Compile Include="Core\ViewModels\GigsViewModel.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Core\Dtos\AttendDto.cs" />
-    <Compile Include="Core\Dtos\FollowDto.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Persistance\Migrations\intiateDB.cs" />
-    <Compile Include="Persistance\Migrations\intiateDB.Designer.cs">
-      <DependentUpon>intiateDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Persistance\Migrations\addgigGenreTb.cs" />
-    <Compile Include="Persistance\Migrations\addgigGenreTb.Designer.cs">
-      <DependentUpon>addgigGenreTb.cs</DependentUpon>
-    </Compile>
     <Compile Include="Persistance\Migrations\Annotation.cs" />
     <Compile Include="Persistance\Migrations\Annotation.Designer.cs">
       <DependentUpon>Annotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistance\Migrations\Configuration.cs" />
+    <Compile Include="Persistance\Migrations\intiateDB.cs" />
+    <Compile Include="Persistance\Migrations\intiateDB.Designer.cs">
+      <DependentUpon>intiateDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Persistance\Migrations\PopulateGenresTable.cs" />
     <Compile Include="Persistance\Migrations\PopulateGenresTable.Designer.cs">
       <DependentUpon>PopulateGenresTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\AddGenreForignKey.cs" />
-    <Compile Include="Persistance\Migrations\AddGenreForignKey.Designer.cs">
-      <DependentUpon>AddGenreForignKey.cs</DependentUpon>
-    </Compile>
     <Compile Include="Persistance\Migrations\updateGigGenretype.cs" />
     <Compile Include="Persistance\Migrations\updateGigGenretype.Designer.cs">
       <DependentUpon>updateGigGenretype.cs</DependentUpon>
     </Compile>
-    <Compile Include="Persistance\Migrations\AddNameToApplicationUser.cs" />
-    <Compile Include="Persistance\Migrations\AddNameToApplicationUser.Designer.cs">
-      <DependentUpon>AddNameToApplicationUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Persistance\Migrations\AddAttendenceFollowersTables.cs" />
-    <Compile Include="Persistance\Migrations\AddAttendenceFollowersTables.Designer.cs">
-      <DependentUpon>AddAttendenceFollowersTables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Persistance\Migrations\Configuration.cs" />
-    <Compile Include="Core\ViewModels\AccountViewModels.cs" />
-    <Compile Include="Persistance\ApplicationDbContext.cs" />
-    <Compile Include="Core\Models\ArtistFollower.cs" />
-    <Compile Include="Core\Models\Attendence.cs" />
-    <Compile Include="Core\Models\Genre.cs" />
-    <Compile Include="Core\Models\Gig.cs" />
-    <Compile Include="Core\Models\ApplicationUser.cs" />
-    <Compile Include="Core\ViewModels\ManageViewModels.cs" />
+    <Compile Include="Persistance\Repository\ApplicationUserRepository.cs" />
+    <Compile Include="Persistance\Repository\ArtistFollowingRepository.cs" />
+    <Compile Include="Persistance\Repository\AttendanceRepository.cs" />
+    <Compile Include="Persistance\Repository\GenreRepository.cs" />
+    <Compile Include="Persistance\Repository\GigRepository.cs" />
+    <Compile Include="Persistance\Repository\NotificationRepository.cs" />
+    <Compile Include="Persistance\Repository\UserNotificationRepository.cs" />
+    <Compile Include="Persistance\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Core\ViewModels\GigViewModel.cs" />
@@ -486,32 +468,33 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Persistance\Migrations\intiateDB.resx">
-      <DependentUpon>intiateDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\addgigGenreTb.resx">
-      <DependentUpon>addgigGenreTb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\Annotation.resx">
-      <DependentUpon>Annotation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\PopulateGenresTable.resx">
-      <DependentUpon>PopulateGenresTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\AddGenreForignKey.resx">
-      <DependentUpon>AddGenreForignKey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\updateGigGenretype.resx">
-      <DependentUpon>updateGigGenretype.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\AddNameToApplicationUser.resx">
-      <DependentUpon>AddNameToApplicationUser.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\GigHub.Model\GigHub.Model.csproj">
+      <Project>{cb7d8a92-fdec-41d8-8805-1e7b8b9033b9}</Project>
+      <Name>GigHub.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GigHub.Shared\GigHub.Shared.csproj">
+      <Project>{05f48289-3d06-4f91-bd3f-dd00ddfbc175}</Project>
+      <Name>GigHub.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <EmbeddedResource Include="Persistance\Migrations\AddAttendenceFollowersTables.resx">
       <DependentUpon>AddAttendenceFollowersTables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persistance\Migrations\addCancelColumnToGig.resx">
       <DependentUpon>addCancelColumnToGig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistance\Migrations\AddGenreForignKey.resx">
+      <DependentUpon>AddGenreForignKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistance\Migrations\addgigGenreTb.resx">
+      <DependentUpon>addgigGenreTb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistance\Migrations\addIsReadyTouserNotification.resx">
+      <DependentUpon>addIsReadyTouserNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistance\Migrations\AddNameToApplicationUser.resx">
+      <DependentUpon>AddNameToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persistance\Migrations\AddNotification.resx">
       <DependentUpon>AddNotification.cs</DependentUpon>
@@ -519,8 +502,17 @@
     <EmbeddedResource Include="Persistance\Migrations\AddNotification1.resx">
       <DependentUpon>AddNotification1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Persistance\Migrations\addIsReadyTouserNotification.resx">
-      <DependentUpon>addIsReadyTouserNotification.cs</DependentUpon>
+    <EmbeddedResource Include="Persistance\Migrations\Annotation.resx">
+      <DependentUpon>Annotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistance\Migrations\intiateDB.resx">
+      <DependentUpon>intiateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistance\Migrations\PopulateGenresTable.resx">
+      <DependentUpon>PopulateGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistance\Migrations\updateGigGenretype.resx">
+      <DependentUpon>updateGigGenretype.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

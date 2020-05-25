@@ -1,20 +1,17 @@
-﻿using FullStackCourse1.Core.Models;
+﻿using FullStackCourse1.Core;
 using FullStackCourse1.Core.ViewModels;
+using GigHub.Model.Models;
 using Microsoft.AspNet.Identity;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Data.Entity;
-using FullStackCourse1.Persistance;
-using FullStackCourse1.Core;
+using GigHub.Shared;
+
 
 namespace FullStackCourse1.Controllers
 {
     public class GigsController : Controller
     {
-       
+
         IUnitOfWork _unitofWork;
         public GigsController(IUnitOfWork unitOfWork)
         {
@@ -25,8 +22,8 @@ namespace FullStackCourse1.Controllers
         [HttpPost]
         public ActionResult Search(GigsViewModel viewmodel)
         {
-           
-         return   RedirectToAction("Index", "Home",new { query = viewmodel.SearchTerm });
+
+            return RedirectToAction("Index", "Home", new { query = viewmodel.SearchTerm });
         }
 
 
@@ -41,12 +38,12 @@ namespace FullStackCourse1.Controllers
                 Datetime = gig.Datetime,
                 Genre = gig.Genre,
                 Venue = gig.Venue,
-                IsAttending =_unitofWork.Attendences.GetAttendance(id,userId)!=null,
-                IsFollowing=_unitofWork.Followings.GetFollower(gig.ArtistId,userId)!=null,
-                IsUserAuthorized=User.Identity.IsAuthenticated
+                IsAttending = _unitofWork.Attendences.GetAttendance(id, userId) != null,
+                IsFollowing = _unitofWork.Followings.GetFollower(gig.ArtistId, userId) != null,
+                IsUserAuthorized = User.Identity.IsAuthenticated
             };
 
-            return View("GigView",viewmodel);
+            return View("GigView", viewmodel);
         }
         // GET: Gigs
         [Authorize]
@@ -57,7 +54,7 @@ namespace FullStackCourse1.Controllers
                 Genres = _unitofWork.Genres.GetAll(),
                 Heading = "Create Gig"
             };
-            return View("GigForm",ViewModel);
+            return View("GigForm", ViewModel);
         }
 
         [Authorize]
@@ -86,7 +83,7 @@ namespace FullStackCourse1.Controllers
             };
             _unitofWork.Gigs.Add(gig);
             _unitofWork.Complete();
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
         [Authorize]
@@ -124,7 +121,7 @@ namespace FullStackCourse1.Controllers
                 viewModel.Genres = _unitofWork.Genres.GetAll();
                 return View("GigForm", viewModel);
             }
-            
+
             var gig = _unitofWork.Gigs.GetGigWithAttendees(viewModel.Id);
             if (gig == null)
                 return HttpNotFound();
@@ -155,22 +152,22 @@ namespace FullStackCourse1.Controllers
             {
                 UpCommingGigs = gigs,
                 IsAuthorized = User.Identity.IsAuthenticated,
-                PageHeader="Up Comming Gigs",
-                 Attendences=attendences
-                
+                PageHeader = "Up Comming Gigs",
+                Attendences = attendences
+
             };
 
-            return View("Gigs",viewModel);
+            return View("Gigs", viewModel);
         }
 
 
         [Authorize]
         public ActionResult Mine()
         {
-            
+
             var gigs = _unitofWork.Gigs.GetArtistFutureGigs(User.Identity.GetUserId());
 
-         
+
             return View("MyGigs", gigs);
         }
 

@@ -8,8 +8,9 @@ using FluentAssertions;
 using FullStackCourse1.Controllers;
 using FullStackCourse1.Core;
 using FullStackCourse1.Core.Dtos;
-using FullStackCourse1.Core.IRepository;
-using FullStackCourse1.Core.Models;
+using GigHub.Model.Models;
+using GigHub.Shared;
+using GigHub.Shared.IRepository;
 using Gighub.Test.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -17,7 +18,7 @@ using Moq;
 namespace Gighub.Test.Controllers
 {
     [TestClass]
-public    class AttendanceControllerTest
+    public    class AttendanceControllerTest
     {
         private Mock<IUnitOfWork> _unitOfWork;
         private AttendencesController _attendanceController;

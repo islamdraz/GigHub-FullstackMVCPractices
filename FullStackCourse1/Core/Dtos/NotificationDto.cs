@@ -1,5 +1,5 @@
-﻿using FullStackCourse1.Core.Models;
-using System;
+﻿using System;
+using GigHub.Model.Models;
 
 namespace FullStackCourse1.Core.Dtos
 {

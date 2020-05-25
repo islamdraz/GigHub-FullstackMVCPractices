@@ -8,8 +8,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using FullStackCourse1.Core.Models;
 using FullStackCourse1.Core.ViewModels;
+using GigHub.Model.Models;
 
 namespace FullStackCourse1.Controllers
 {
