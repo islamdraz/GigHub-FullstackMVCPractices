@@ -7,8 +7,7 @@ namespace GigHub.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-
-            MigrationsDirectory = @"Persistance\Migrations";
+            
         }
 
         protected override void Seed(ApplicationDbContext context)

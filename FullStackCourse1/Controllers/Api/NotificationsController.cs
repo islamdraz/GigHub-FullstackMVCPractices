@@ -1,19 +1,14 @@
-﻿using Microsoft.AspNet.Identity;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-
 using AutoMapper;
-using FullStackCourse1.Core.Dtos;
-using FullStackCourse1.Core;
 using GigHub.Model.Models;
 using GigHub.Shared;
+using GigHub.Web.Core.Dtos;
+using Microsoft.AspNet.Identity;
 using WebGrease.Css.Extensions;
 
-namespace FullStackCourse1.Controllers.Api
+namespace GigHub.Web.Controllers.Api
 {
     [Authorize]
     public class NotificationsController : ApiController

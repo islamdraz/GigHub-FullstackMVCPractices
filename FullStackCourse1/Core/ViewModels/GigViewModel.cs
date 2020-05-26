@@ -1,14 +1,12 @@
-﻿using FullStackCourse1.Controllers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Web;
 using System.Web.Mvc;
 using GigHub.Model.Models;
+using GigHub.Web.Controllers;
 
-namespace FullStackCourse1.Core.ViewModels
+namespace GigHub.Web.Core.ViewModels
 {
     public class GigViewModel
     {

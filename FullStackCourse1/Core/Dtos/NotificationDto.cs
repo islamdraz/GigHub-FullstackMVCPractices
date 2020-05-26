@@ -1,7 +1,7 @@
 ﻿using System;
 using GigHub.Model.Models;
 
-namespace FullStackCourse1.Core.Dtos
+namespace GigHub.Web.Core.Dtos
 {
     public class NotificationDto
     {

@@ -6,7 +6,6 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http.Results;
-using FullStackCourse1.Controllers.Api;
 using FullStackCourse1.Core;
 using Gighub.Test.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -15,6 +14,7 @@ using FluentAssertions;
 using GigHub.Model.Models;
 using GigHub.Shared;
 using GigHub.Shared.IRepository;
+using GigHub.Web.Controllers.Api;
 using Microsoft.AspNet.Identity;
 
 namespace Gighub.Test.Controllers.Api

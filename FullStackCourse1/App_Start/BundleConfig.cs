@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace FullStackCourse1
+namespace GigHub.Web
 {
     public class BundleConfig
     {

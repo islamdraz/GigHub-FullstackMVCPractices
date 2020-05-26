@@ -1,15 +1,13 @@
 ﻿using System;
+using GigHub.Data;
+using GigHub.Model.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
-using Microsoft.Owin.Security.Google;
 using Owin;
-using GigHub.Model.Models;
 
-using ApplicationDbContext = FullStackCourse1.Persistance.ApplicationDbContext;
-
-namespace FullStackCourse1
+namespace GigHub.Web
 {
     public partial class Startup
     {

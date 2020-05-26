@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FullStackCourse1.Core.Dtos
+namespace GigHub.Web.Core.Dtos
 {
     public class GigDto
     {

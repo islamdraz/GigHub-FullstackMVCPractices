@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullStackCourse1", "FullStackCourse1\FullStackCourse1.csproj", "{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Web", "FullStackCourse1\GigHub.Web.csproj", "{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gighub.Test", "Gighub.Test\Gighub.Test.csproj", "{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}"
 EndProject
@@ -13,9 +13,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Model", "GigHub.Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Shared", "GigHub.Shared\GigHub.Shared.csproj", "{05F48289-3D06-4F91-BD3F-DD00DDFBC175}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistance", "Persistance", "{18F8EA73-7316-485D-AB38-5113430B6F96}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{18F8EA73-7316-485D-AB38-5113430B6F96}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Data", "GigHub.Data\GigHub.Data.csproj", "{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Data.Test", "GigHub.Data.Test\GigHub.Data.Test.csproj", "{5632B575-0649-42E9-8E6D-951FD29B85E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Model.Test", "GigHub.Model.Test\GigHub.Model.Test.csproj", "{8FD6C92C-5115-4B0D-9973-9F08882FD5EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,7 +32,6 @@ Global
 		{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A16A1B5-FD0F-42DA-B576-0B7807ECFE8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{723A34BB-AF02-4784-BCBD-1DE6A4DCC8E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB7D8A92-FDEC-41D8-8805-1E7B8B9033B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -43,6 +46,14 @@ Global
 		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5632B575-0649-42E9-8E6D-951FD29B85E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5632B575-0649-42E9-8E6D-951FD29B85E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5632B575-0649-42E9-8E6D-951FD29B85E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5632B575-0649-42E9-8E6D-951FD29B85E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FD6C92C-5115-4B0D-9973-9F08882FD5EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FD6C92C-5115-4B0D-9973-9F08882FD5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FD6C92C-5115-4B0D-9973-9F08882FD5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FD6C92C-5115-4B0D-9973-9F08882FD5EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +62,8 @@ Global
 		{CB7D8A92-FDEC-41D8-8805-1E7B8B9033B9} = {340D3F1A-D1B8-42ED-8B9F-95D4CAC60CAC}
 		{05F48289-3D06-4F91-BD3F-DD00DDFBC175} = {340D3F1A-D1B8-42ED-8B9F-95D4CAC60CAC}
 		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989} = {340D3F1A-D1B8-42ED-8B9F-95D4CAC60CAC}
+		{5632B575-0649-42E9-8E6D-951FD29B85E6} = {18F8EA73-7316-485D-AB38-5113430B6F96}
+		{8FD6C92C-5115-4B0D-9973-9F08882FD5EC} = {18F8EA73-7316-485D-AB38-5113430B6F96}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A615599-681F-476D-9218-9342A81F07DB}

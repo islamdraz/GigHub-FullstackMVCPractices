@@ -1,17 +1,14 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using GigHub.Model.Models;
+using GigHub.Web.Core.ViewModels;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using FullStackCourse1.Core.ViewModels;
-using GigHub.Model.Models;
 
-namespace FullStackCourse1.Controllers
+namespace GigHub.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller

@@ -5,13 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http.Results;
 using FluentAssertions;
-using FullStackCourse1.Controllers;
 using FullStackCourse1.Core;
-using FullStackCourse1.Core.Dtos;
 using GigHub.Model.Models;
 using GigHub.Shared;
 using GigHub.Shared.IRepository;
 using Gighub.Test.Extensions;
+using GigHub.Web.Controllers;
+using GigHub.Web.Core.Dtos;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 

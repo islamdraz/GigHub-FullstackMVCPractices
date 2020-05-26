@@ -1,8 +1,9 @@
-﻿using Microsoft.Owin;
+﻿using GigHub.Web;
+using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(FullStackCourse1.Startup))]
-namespace FullStackCourse1
+[assembly: OwinStartup(typeof(Startup))]
+namespace GigHub.Web
 {
     public partial class Startup
     {

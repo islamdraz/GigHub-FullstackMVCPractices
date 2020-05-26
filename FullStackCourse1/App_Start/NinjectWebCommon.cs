@@ -1,19 +1,18 @@
-﻿using FullStackCourse1.App_Start;
-
-using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-using Ninject;
-using Ninject.Web.Common;
-using Ninject.Web.Common.WebHost;
-using Ninject.Extensions.Conventions;
-using System;
+﻿using System;
 using System.Data.Entity;
 using System.Web;
-using FullStackCourse1.Persistance;
-
+using GigHub.Data;
+using GigHub.Shared;
+using GigHub.Web;
+using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+using Ninject;
+using Ninject.Extensions.Conventions;
+using Ninject.Web.Common;
+using Ninject.Web.Common.WebHost;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
-namespace FullStackCourse1.App_Start
+namespace GigHub.Web
 {
 
     public static class NinjectWebCommon
@@ -50,6 +49,7 @@ namespace FullStackCourse1.App_Start
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
                 kernel.Bind<DbContext>().To<ApplicationDbContext>();
+                kernel.Bind<IUnitOfWork>().To<UnitOfWork>();
                 
 
                 kernel.Bind(x =>

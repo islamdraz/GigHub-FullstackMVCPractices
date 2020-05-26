@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
-using FullStackCourse1.Controllers;
-using FullStackCourse1.Core;
+
 using Gighub.Test.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
@@ -9,6 +8,7 @@ using System.Web.Mvc;
 using GigHub.Model.Models;
 using GigHub.Shared;
 using GigHub.Shared.IRepository;
+using GigHub.Web.Controllers;
 
 namespace Gighub.Test.Controllers
 {

@@ -1,17 +1,10 @@
-﻿using FullStackCourse1.Core;
-using Microsoft.AspNet.Identity;
-using System;
-using System.Collections.Generic;
-
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using GigHub.Model;
 using GigHub.Model.Models;
 using GigHub.Shared;
+using Microsoft.AspNet.Identity;
 
-namespace FullStackCourse1.Controllers.Api
+namespace GigHub.Web.Controllers.Api
 {
     [Authorize]
     public class GigsApiController : ApiController

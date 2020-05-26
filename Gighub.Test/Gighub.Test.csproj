@@ -120,9 +120,6 @@
     <Compile Include="DomainModels\NotificationTest.cs" />
     <Compile Include="Extensions\ControllerExtension.cs" />
     <Compile Include="Extensions\MockDbSetExtensions.cs" />
-    <Compile Include="Helper\DbSetSourceMock.cs" />
-    <Compile Include="Persistance\Repository\ApplicationUserRepositoryTest.cs" />
-    <Compile Include="Persistance\Repository\GigsRepositoryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,9 +127,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FullStackCourse1\FullStackCourse1.csproj">
+    <ProjectReference Include="..\FullStackCourse1\GigHub.Web.csproj">
       <Project>{7a16a1b5-fd0f-42da-b576-0b7807ecfe8c}</Project>
-      <Name>FullStackCourse1</Name>
+      <Name>GigHub.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\GigHub.Model\GigHub.Model.csproj">
       <Project>{CB7D8A92-FDEC-41D8-8805-1E7B8B9033B9}</Project>

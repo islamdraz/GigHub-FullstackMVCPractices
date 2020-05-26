@@ -1,13 +1,11 @@
-﻿using FullStackCourse1.Core;
-using FullStackCourse1.Core.ViewModels;
-using GigHub.Model.Models;
-using Microsoft.AspNet.Identity;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
+using GigHub.Model.Models;
 using GigHub.Shared;
+using GigHub.Web.Core.ViewModels;
+using Microsoft.AspNet.Identity;
 
-
-namespace FullStackCourse1.Controllers
+namespace GigHub.Web.Controllers
 {
     public class GigsController : Controller
     {

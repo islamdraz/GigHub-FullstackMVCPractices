@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
-namespace FullStackCourse1.Core.ViewModels
+
+namespace GigHub.Web.Core.ViewModels
 {
     public class ValideTime: ValidationAttribute 
     {

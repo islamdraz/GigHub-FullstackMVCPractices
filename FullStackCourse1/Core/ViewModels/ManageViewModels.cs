@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace FullStackCourse1.Core.ViewModels
+namespace GigHub.Web.Core.ViewModels
 {
     public class IndexViewModel
     {

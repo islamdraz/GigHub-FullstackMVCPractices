@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
-using FullStackCourse1.Core.Dtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using GigHub.Model.Models;
+using GigHub.Web.Core.Dtos;
 
-namespace FullStackCourse1.App_Start
+namespace GigHub.Web
 {
     public class AutoMapperProfile :Profile
     {

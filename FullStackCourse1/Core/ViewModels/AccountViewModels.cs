@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace FullStackCourse1.Core.ViewModels
+namespace GigHub.Web.Core.ViewModels
 {
     public class ExternalLoginConfirmationViewModel
     {
