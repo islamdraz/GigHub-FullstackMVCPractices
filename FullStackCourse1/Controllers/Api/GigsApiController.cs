@@ -16,12 +16,12 @@ namespace FullStackCourse1.Controllers.Api
     [Authorize]
     public class GigsApiController : ApiController
     {
-      //  private GenericRepository<Gig> _repository; 
+        private GenericRepository<Gig> _repository; 
 
         IUnitOfWork _unitOfWork;
-        public GigsApiController(IUnitOfWork unitOfWork)
+        public GigsApiController(IUnitOfWork unitOfWork , GenericRepository<Gig> repository)
         {
-           // _repository = repository;
+            _repository = repository;
 
              _unitOfWork = unitOfWork;
         }

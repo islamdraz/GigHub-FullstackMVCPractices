@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Shared", "GigHub.Sha
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistance", "Persistance", "{18F8EA73-7316-485D-AB38-5113430B6F96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GigHub.Data", "GigHub.Data\GigHub.Data.csproj", "{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{05F48289-3D06-4F91-BD3F-DD00DDFBC175}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05F48289-3D06-4F91-BD3F-DD00DDFBC175}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05F48289-3D06-4F91-BD3F-DD00DDFBC175}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{CB7D8A92-FDEC-41D8-8805-1E7B8B9033B9} = {340D3F1A-D1B8-42ED-8B9F-95D4CAC60CAC}
 		{05F48289-3D06-4F91-BD3F-DD00DDFBC175} = {340D3F1A-D1B8-42ED-8B9F-95D4CAC60CAC}
+		{EC7477A1-368C-4BA5-B1E9-4D4BC0F8D989} = {340D3F1A-D1B8-42ED-8B9F-95D4CAC60CAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A615599-681F-476D-9218-9342A81F07DB}

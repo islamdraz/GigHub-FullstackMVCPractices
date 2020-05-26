@@ -6,7 +6,9 @@ using Ninject.Web.Common;
 using Ninject.Web.Common.WebHost;
 using Ninject.Extensions.Conventions;
 using System;
+using System.Data.Entity;
 using System.Web;
+using FullStackCourse1.Persistance;
 
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
@@ -47,14 +49,16 @@ namespace FullStackCourse1.App_Start
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-
-                RegisterServices(kernel);
+                kernel.Bind<DbContext>().To<ApplicationDbContext>();
+                
 
                 kernel.Bind(x =>
                 {
                     x.FromThisAssembly()
                         .SelectAllClasses()
                         .BindDefaultInterface();
+
+                    
                 });
                 return kernel;
             }
@@ -69,8 +73,9 @@ namespace FullStackCourse1.App_Start
         /// Load your modules or register your services here!
         /// </summary>
         /// <param name="kernel">The kernel.</param>
-        private static void RegisterServices(IKernel kernel)
+        private static void RegisterServices<T>(IKernel kernel) where T :class
         {
+            
         }
     }
 }
